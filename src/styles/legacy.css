@@ -1,0 +1,323 @@
+/**
+ * Legacy Compatibility & Publication Styles
+ * 兼容旧代码和project_renderer.js动态渲染的样式
+ */
+
+/* ============================================
+   PUBLICATION TABLE COMPATIBILITY
+   兼容publication动态渲染使用的table结构
+   ============================================ */
+
+.research-list table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;  /* Override cellspacing="17" in HTML */
+  margin: 0;
+}
+
+.research-list tbody {
+  display: block;
+}
+
+.research-list tr {
+  display: flex;
+  gap: 1rem;  /* Vincent: 1rem gap */
+  padding: 0.5rem 0;  /* Compact: reduced from 1rem */
+  border-bottom: 1px solid var(--color-border-light);  /* Separator line */
+  transition: none;  /* No hover effect */
+  align-items: flex-start;
+  margin-bottom: 0;  /* Remove margin, use border instead */
+}
+
+.research-list tr:hover {
+  background-color: transparent;  /* No hover background */
+}
+
+.research-list tr:last-child {
+  border-bottom: none;  /* No border after last item */
+}
+
+/* 图片列 */
+.research-list td:first-child {
+  flex-shrink: 0;
+  width: 180px;  /* Vincent: 180px */
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.research-list td:first-child img,
+.research-list td:first-child video {
+  width: 180px;  /* Vincent: 180px */
+  height: 101px;  /* Vincent: 101px (16:9 ratio) */
+  border-radius: 4px;  /* Vincent: 4px */
+  object-fit: cover;
+}
+
+/* 文字内容列 */
+.research-list td:last-child {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+/* 标题样式 - Vincent: 1rem, 600 weight */
+.research-list .title,
+.research-list div.title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.35rem;
+  color: var(--color-text-primary);
+}
+
+.research-list .title a,
+.research-list div.title a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.research-list .title a:hover,
+.research-list div.title a:hover {
+  color: var(--color-link-default);
+  text-decoration: underline;
+}
+
+/* 作者样式 - Vincent: .9rem, muted color */
+.research-list .author,
+.research-list div.author {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.2rem;
+  font-weight: var(--font-weight-normal);
+}
+
+.research-list .author a,
+.research-list div.author a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.research-list .author a:hover,
+.research-list div.author a:hover {
+  color: var(--color-link-default);
+  text-decoration: none;
+}
+
+/* 高亮作者名(通常是自己) */
+.research-list span.me {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+/* Venue样式 - Vincent: .9rem, separate line */
+.research-list .venue-line {
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.research-list .venue-line .venue {
+  font-weight: normal;
+}
+
+.research-list .venue-line .venue b {
+  font-weight: 600;
+}
+
+/* Award标签 - Vincent: amber color #d97706, inline with venue */
+.research-list .venue-line .award {
+  color: #d97706;
+  font-weight: 500;
+}
+
+/* Legacy: Keep old em/i styles for backward compatibility */
+.research-list em,
+.research-list i {
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Award标签 - Standalone (legacy fallback) */
+.research-list > div.award {
+  font-size: 0.875rem;
+  color: #d97706;
+  font-weight: var(--font-weight-medium);
+  margin-top: 0.25rem;
+  display: inline-block;
+}
+
+/* Material链接 - Vincent: .875rem, .75rem gap */
+.research-list .material,
+.research-list div.material {
+  margin-top: 0;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+}
+
+.research-list .material a,
+.research-list div.material a {
+  color: var(--color-link-default);
+  text-decoration: none;
+}
+
+.research-list .material a:hover,
+.research-list div.material a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/* Year/Topic section headers */
+.research-list h4 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-top: var(--spacing-subsection);
+  margin-bottom: var(--spacing-element);
+  padding-bottom: var(--spacing-tight);
+  border-bottom: var(--border-width-thin) solid var(--color-border-light);
+}
+
+.research-list h4:first-child {
+  margin-top: 0;
+}
+
+/* Anchor spacers */
+.research-list .text.anchor {
+  display: block;
+  height: auto;  /* allow headings to take up space so content below doesn't overlap */
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ============================================
+   LEGACY CLASSES COMPATIBILITY
+   兼容旧CSS中的类名
+   ============================================ */
+
+/* 高亮文本 */
+span.highlight {
+  background-color: #ffffd0;
+  padding: 0.1em 0.2em;
+}
+
+/* list-year右对齐(用于Teaching/Awards) */
+.list-year {
+  float: right;
+  margin-left: var(--spacing-item);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+  text-align: right;
+  font-size: var(--font-size-tiny);
+}
+
+
+/* ============================================
+   RESPONSIVE - Publications移动端
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Publications - 移动端竖排（图上文下，Vincent style） */
+  .research-list tr {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    align-items: flex-start;
+  }
+
+  .research-list td:first-child {
+    width: 100%;
+  }
+
+  .research-list td:first-child img,
+  .research-list td:first-child video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .research-list td:last-child {
+    width: 100%;
+  }
+
+  /* 移动端字号调整 */
+  .research-list .title,
+  .research-list div.title {
+    font-size: 0.875rem;
+    text-align: left;
+    margin-bottom: 0.2rem;
+  }
+
+  .research-list .author,
+  .research-list div.author {
+    font-size: 0.8rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .research-list .venue-line {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .research-list .material,
+  .research-list div.material {
+    font-size: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .research-list h4 {
+    font-size: var(--font-size-h2);
+  }
+
+  /* Mentored Students - 移动端名字和职位同行显示 */
+  #students ul li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 0.4rem;
+  }
+
+  #students .list-year {
+    float: none;
+    margin-left: 0;
+    text-align: left;
+  }
+}
+
+/* Version toggle (e.g., arXiv vs Conference) for publication cards */
+.research-list .version-toggle {
+  margin: 4px 0 6px;
+  font-size: 0.85em;
+}
+.research-list .version-toggle .version-tab {
+  cursor: pointer;
+  margin-right: 10px;
+  color: #888;
+  border-bottom: 1px solid transparent;
+  text-decoration: none;
+}
+.research-list .version-toggle .version-tab:hover {
+  color: inherit;
+}
+.research-list .version-toggle .version-tab.is-active {
+  color: inherit;
+  border-bottom-color: currentColor;
+  font-weight: 600;
+}
+.research-list .pub-version[hidden] {
+  display: none;
+}

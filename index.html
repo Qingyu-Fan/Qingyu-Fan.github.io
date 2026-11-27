@@ -1,164 +1,207 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Qingyu Fan, PhD student at Fudan University working on computer vision and robot learning.">
   <meta name="author" content="Qingyu Fan">
-  <meta name="description" content="Qingyu Fan is a PhD student at Fudan University working at the intersection of computer vision and robot learning.">
   <meta name="google-site-verification" content="Io5PBEGCOEzWaL7oGOG-6-qHqYLZsvb7vAXvdoEF-1Y">
-  <meta name="theme-color" content="#fbfbf9">
-  <title>Qingyu Fan | Computer Vision &amp; Robot Learning</title>
-  <link rel="icon" href="images/F.png" type="image/png">
+  <title>Qingyu Fan</title>
+  <link rel="icon" href="assets/identity/robot-mark.ico">
+  <link rel="stylesheet" href="src/styles/tokens.css">
+  <link rel="stylesheet" href="src/styles/base.css">
+  <link rel="stylesheet" href="src/styles/layout.css">
+  <link rel="stylesheet" href="src/styles/components.css">
+  <link rel="stylesheet" href="src/styles/legacy.css">
   <link rel="stylesheet" href="stylesheet.css">
-  <script src="homepage.js" defer></script>
 </head>
-<body id="top">
-  <a class="skip" href="#about">Skip to content</a>
-  <header class="masthead">
-    <div class="wrap bar">
-      <a class="monogram" href="#top" aria-label="Qingyu Fan, back to top">QF</a>
-      <nav aria-label="Page sections">
-        <a href="#about">About</a>
+
+<body>
+  <header id="top" class="top-nav" tabindex="-1">
+    <div class="top-nav-container">
+      <div class="top-nav-identity">
+        <h1 class="top-nav-name">Qingyu Fan <span lang="zh-Hans">范庆宇</span></h1>
+        <p class="top-nav-title">PhD Student in Computer Science, Fudan University</p>
+      </div>
+      <nav class="top-nav-links" aria-label="Page sections">
+        <a href="#research">Research</a>
         <a href="#publications">Publications</a>
-        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#awards">Awards</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a href="#service">Service</a>
       </nav>
     </div>
   </header>
-
-  <main class="wrap">
-    <section id="about" aria-labelledby="profile-name">
-      <div class="profile">
-        <img class="portrait" src="assets/portrait.jpg" width="720" height="900" alt="Qingyu Fan" fetchpriority="high">
-        <div class="bio">
-          <h1 id="profile-name">Qingyu Fan <span lang="zh-Hans">范庆宇</span></h1>
-          <p>I’m pursuing a PhD in computer science at Fudan University through a joint program with the Shanghai Innovation Institute. My advisor is <a href="https://zxwu.azurewebsites.net/">Prof. Zuxuan Wu</a> at Fudan’s <a href="https://teai.fudan.edu.cn/">Institute of Trustworthy Embodied Artificial Intelligence</a>.</p>
-          <p>I earned my master’s degree from the University of Chinese Academy of Sciences and conducted my research at the Institute of Automation, Chinese Academy of Sciences. I received my bachelor’s degree in automation from Hunan University, with a minor in robotics engineering.</p>
-          <p>I’m also a research intern at Robbyant, where my mentor is <a href="https://zkcys001.github.io/">Dr. Kecheng Zheng</a>.</p>
-          <ul class="resources contacts" aria-label="Contact and profiles">
-            <li><a href="mailto:qingyu.fan.ai@outlook.com">Email</a></li>
-            <li><a href="assets/Qingyu_Fan_CV.pdf">CV</a></li>
-            <li><a href="https://scholar.google.com/citations?user=UhOKmbAAAAAJ&amp;hl=en">Google Scholar</a></li>
-            <li><a href="https://github.com/Qingyu-Fan">GitHub</a></li>
-          </ul>
-        </div>
+  <main class="container">
+    <section class="hero" id="about" aria-label="About">
+      <div class="hero-text hero-bio">
+        <h2 class="greeting">About</h2>
+        <p>I’m a PhD student in computer science at Fudan University, advised by <a href="https://zxwu.azurewebsites.net/">Prof. Zuxuan Wu</a> at the <a href="https://teai.fudan.edu.cn/">Institute of Trustworthy Embodied Artificial Intelligence</a> and the <a href="https://fvl.fudan.edu.cn/en/">Fudan Vision and Learning Laboratory</a>. My doctoral program is jointly run by Fudan and the Shanghai Innovation Institute. Currently, I’m a research intern at <a href="https://www.robbyant.com/">Robbyant</a>, where I work with <a href="https://zkcys001.github.io/">Dr. Kecheng Zheng</a>.</p>
+        <p>Previously, I earned my master’s degree from the Institute of Automation, Chinese Academy of Sciences, and received my bachelor’s degree in automation from Hunan University, with a minor in robotics engineering.</p>
       </div>
-      <div class="research">
-        <div>
-          <h2>Research interests</h2>
-          <p>I work at the intersection of computer vision and robot learning. My long-term goal is to build robots that can reason about the physical world and act autonomously, with skills that transfer across tasks, environments, and embodiments.</p>
-        </div>
-        <div>
-          <h2>Current focus</h2>
-          <p>How can a robot anticipate the effects of its actions and use the outcome of each attempt to acquire or refine a skill? This question guides my current interests in agentic robot learning, world–action models (WAMs), and vision–language–action (VLA) models.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="publications" class="section" aria-labelledby="publications-title">
-      <h2 id="publications-title">Publications</h2>
-      <article class="paper">
-        <div class="demo">
-          <video width="640" height="360" controls muted playsinline preload="none" poster="assets/peafowl.jpg" aria-label="Dual-arm robot moving bottles into a bin">
-            <source src="assets/peafowl.mp4" type="video/mp4">
-            <a href="assets/peafowl.mp4">Watch the PEAfowl demonstration</a>
-          </video>
-        </div>
-        <div>
-          <p class="venue"><abbr title="IEEE Robotics and Automation Letters">RA-L</abbr> <span>2026</span></p>
-          <h3><a href="https://peafowlvla.github.io/">PEAfowl: Perception-Enhanced Multi-View Vision-Language-Action for Bimanual Manipulation</a></h3>
-          <p class="authors"><strong>Qingyu Fan</strong>, Zhaoxiang Li*, Jinrui Hu*, Yi Lu, Wang Chen, Qiu Shen, Xiao-Xiao Long, Yinghao Cai, Tao Lu, Shuo Wang, Xun Cao <small>(* equal contribution)</small></p>
-          <p>PEAfowl aligns visual features across camera views in 3D and uses language to select the features relevant to a bimanual task.</p>
-          <ul class="resources" aria-label="PEAfowl resources">
-            <li><a href="https://doi.org/10.1109/LRA.2026.3726379">Paper</a></li>
-            <li><a href="https://peafowlvla.github.io/">Project</a></li>
-            <li><a href="https://github.com/Qingyu-Fan/PEAfowl">Code</a></li>
-          </ul>
-        </div>
-      </article>
-      <article class="paper">
-        <div class="demo">
-          <video width="640" height="360" controls muted playsinline preload="none" poster="assets/miscgrasp.jpg" aria-label="Grasp trials with objects of different shapes and sizes">
-            <source src="assets/miscgrasp.mp4" type="video/mp4">
-            <a href="assets/miscgrasp.mp4">Watch the MISCGrasp demonstration</a>
-          </video>
-        </div>
-        <div>
-          <p class="venue"><abbr title="IEEE/RSJ International Conference on Intelligent Robots and Systems">IROS</abbr> <span>2025</span></p>
-          <h3><a href="https://miscgrasp.github.io/">MISCGrasp: Leveraging Multiple Integrated Scales and Contrastive Learning for Enhanced Volumetric Grasping</a></h3>
-          <p class="authors"><strong>Qingyu Fan</strong>, Yinghao Cai, Chao Li, Chunting Jiao, Xudong Zheng, Tao Lu, Bin Liang, Shuo Wang</p>
-          <p>MISCGrasp uses object geometry at several scales to predict both pinch and power grasps. Contrastive learning helps it recognize similar grasp opportunities on objects of different shapes and sizes.</p>
-          <ul class="resources" aria-label="MISCGrasp resources">
-            <li><a href="https://doi.org/10.1109/IROS60139.2025.11246166">Paper</a></li>
-            <li><a href="https://miscgrasp.github.io/">Project</a></li>
-            <li><a href="https://github.com/Qingyu-Fan/MISCGrasp">Code</a></li>
-          </ul>
-        </div>
-      </article>
-      <article class="paper">
-        <div class="demo">
-          <video width="640" height="360" controls muted playsinline preload="none" poster="assets/neugrasp.jpg" aria-label="Robot grasping objects with transparent and reflective surfaces">
-            <source src="assets/neugrasp.mp4" type="video/mp4">
-            <a href="assets/neugrasp.mp4">Watch the NeuGrasp demonstration</a>
-          </video>
-        </div>
-        <div>
-          <p class="venue"><abbr title="IEEE International Conference on Robotics and Automation">ICRA</abbr> <span>2025</span></p>
-          <h3><a href="https://neugrasp.github.io/">NeuGrasp: Generalizable Neural Surface Reconstruction with Background Priors for Material-Agnostic Object Grasp Detection</a></h3>
-          <p class="authors"><strong>Qingyu Fan</strong>, Yinghao Cai, Chao Li, Wenzhe He, Xudong Zheng, Tao Lu, Bin Liang, Shuo Wang</p>
-          <p>Transparent and reflective objects are difficult for depth sensors to capture. NeuGrasp uses background observations and a few RGB views to reconstruct object surfaces and predict grasps.</p>
-          <ul class="resources" aria-label="NeuGrasp resources">
-            <li><a href="https://doi.org/10.1109/ICRA55743.2025.11127348">Paper</a></li>
-            <li><a href="https://neugrasp.github.io/">Project</a></li>
-            <li><a href="https://github.com/Qingyu-Fan/NeuGrasp">Code</a></li>
-          </ul>
-        </div>
-      </article>
-    </section>
-
-    <section id="experience" class="section detail-section" aria-labelledby="experience-title">
-      <h2 id="experience-title">Experience</h2>
-      <div>
-        <p class="entry-line"><strong><a href="https://technology.robbyant.com/">Robbyant</a>, Ant Group</strong><span class="date">Apr 2026–present</span></p>
-        <p>Research Intern, Embodied AI<br>Mentor: <a href="https://zkcys001.github.io/">Dr. Kecheng Zheng</a></p>
+      <div class="hero-avatar">
+        <img src="assets/portrait.jpg" alt="Qingyu Fan" width="200" height="200">
+        <ul class="hero-links">
+          <li><a href="mailto:qingyu.fan.ai@outlook.com">
+              <span>Email</span>
+              <svg width="1em" height="1em" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2" />
+              </svg>
+            </a></li>
+          <li><a href="https://scholar.google.com/citations?user=UhOKmbAAAAAJ&amp;hl=en">
+              <span>Scholar</span>
+              <svg width="1em" height="1em" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3m6.82 6L12 12.72 5.18 9 12 5.28 18.82 9M17 16l-5 2.72L7 16v-4.09l5 2.72 5-2.72V16Z" />
+              </svg>
+            </a></li>
+          <li><a href="https://github.com/Qingyu-Fan">
+              <span>GitHub</span>
+              <svg width="1em" height="1em" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+              </svg>
+            </a></li>
+        </ul>
       </div>
     </section>
 
-    <section id="projects" class="section" aria-labelledby="projects-title">
-      <h2 id="projects-title">Projects</h2>
-      <article class="paper project">
-        <div class="demo">
-          <video width="960" height="720" controls muted playsinline preload="none" poster="assets/intel-grasping.jpg" aria-label="Robot picking an object from a shelf in the Intel challenge">
-            <source src="assets/intel-grasping.mp4" type="video/mp4">
-            <a href="assets/intel-grasping.mp4">Watch the shelf-picking demonstration</a>
-          </video>
-        </div>
-        <div>
-          <p class="venue">Manipulation Track <span>2023</span></p>
-          <h3>Intel Grand Challenge on Indoor Robot Learning</h3>
-          <p>I built an RGB-D system that identifies a specified object in clutter on a tabletop or shelf and predicts a 6-DoF grasp for it. Our team won first prize in the manipulation track.</p>
-        </div>
-      </article>
+    <section id="research" class="hero-bio">
+      <h2 class="section-heading">Research</h2>
+      <p>My research lies at the intersection of computer vision and robot learning. My long-term goal is to build robots that can learn from experience and apply what they learn to new tasks, environments, and embodiments.</p>
+      <p>I’m particularly interested in how robots can learn at scale, both by making better use of existing data and by gaining new experience on their own. My current research interests include agentic robot learning, world–action models, and vision–language–action models.</p>
     </section>
 
-    <section id="awards" class="section detail-section" aria-labelledby="awards-title">
-      <h2 id="awards-title">Awards</h2>
-      <ul class="entries">
-        <li class="entry-line"><span><strong>National Scholarship</strong><br>Graduate (2025) and undergraduate (2021, 2022)</span></li>
-        <li class="entry-line"><span><strong>Outstanding Undergraduate Thesis</strong><br>Hunan University</span><span class="date">2023</span></li>
+    <section id="publications">
+      <h2 class="section-heading">Publications</h2>
+      <div class="research-list">
+        <table aria-label="Publications"><tbody>
+          <tr>
+            <td>
+              <video width="640" height="360" playsinline autoplay loop muted poster="assets/peafowl.jpg" aria-label="A dual-arm robot placing bottles in a bin">
+                <source src="assets/peafowl.mp4" type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <div class="title"><a href="https://peafowlvla.github.io/">PEAfowl: Perception-Enhanced Multi-View Vision-Language-Action for Bimanual Manipulation</a></div>
+              <div class="author"><span class="me">Qingyu Fan</span>, Zhaoxiang Li, Jinrui Hu, Yi Lu, Wang Chen, Qiu Shen, Xiao-Xiao Long, Yinghao Cai, Tao Lu, Shuo Wang, Xun Cao</div>
+              <div class="venue-line">IEEE Robotics and Automation Letters (RA-L), 2026</div>
+              <div class="material"><a href="https://doi.org/10.1109/LRA.2026.3726379">Paper</a> <a href="https://peafowlvla.github.io/">Project page</a> <a href="https://github.com/Qingyu-Fan/PEAfowl">Code</a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <video width="640" height="360" playsinline autoplay loop muted poster="assets/miscgrasp.jpg" aria-label="Robot grasping objects of different shapes and sizes">
+                <source src="assets/miscgrasp.mp4" type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <div class="title"><a href="https://miscgrasp.github.io/">MISCGrasp: Leveraging Multiple Integrated Scales and Contrastive Learning for Enhanced Volumetric Grasping</a></div>
+              <div class="author"><span class="me">Qingyu Fan</span>, Yinghao Cai, Chao Li, Chunting Jiao, Xudong Zheng, Tao Lu, Bin Liang, Shuo Wang</div>
+              <div class="venue-line">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2025</div>
+              <div class="material"><a href="https://doi.org/10.1109/IROS60139.2025.11246166">Paper</a> <a href="https://miscgrasp.github.io/">Project page</a> <a href="https://github.com/Qingyu-Fan/MISCGrasp">Code</a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <video width="640" height="360" playsinline autoplay loop muted poster="assets/neugrasp.jpg" aria-label="Robot grasping transparent and reflective objects">
+                <source src="assets/neugrasp.mp4" type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <div class="title"><a href="https://neugrasp.github.io/">NeuGrasp: Generalizable Neural Surface Reconstruction with Background Priors for Material-Agnostic Object Grasp Detection</a></div>
+              <div class="author"><span class="me">Qingyu Fan</span>, Yinghao Cai, Chao Li, Wenzhe He, Xudong Zheng, Tao Lu, Bin Liang, Shuo Wang</div>
+              <div class="venue-line">IEEE International Conference on Robotics and Automation (ICRA), 2025</div>
+              <div class="material"><a href="https://doi.org/10.1109/ICRA55743.2025.11127348">Paper</a> <a href="https://neugrasp.github.io/">Project page</a> <a href="https://github.com/Qingyu-Fan/NeuGrasp">Code</a></div>
+            </td>
+          </tr>
+        </tbody></table>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-heading">Projects</h2>
+      <div class="research-list">
+        <table aria-label="Projects"><tbody>
+          <tr>
+            <td>
+              <video width="640" height="360" playsinline autoplay loop muted poster="assets/intel-intro.jpg" aria-label="Intel challenge: reference-object matching, tabletop and shelf grasping, and a robot recreating a target fruit arrangement">
+                <source src="assets/intel-intro.mp4" type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <div class="title">Intel Grand Challenge on Indoor Robot Learning</div>
+              <div class="venue-line"><strong>First Prize, Manipulation Track</strong> (2023)</div>
+            </td>
+          </tr>
+        </tbody></table>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-heading">Experience</h2>
+      <div class="experience-grid">
+        <div class="experience-item">
+          <div class="experience-logo"><img src="assets/ant-symbol.png" alt="Ant Group"><img src="assets/robbyant-square.jpg" alt="Robbyant"></div>
+          <div class="experience-content">
+            <div class="experience-institution">Research Intern, <a href="https://www.robbyant.com/">Robbyant</a>, Ant Group</div>
+            <div class="experience-period">April 2026–present</div>
+            <div class="experience-position">Hosted by <a href="https://zkcys001.github.io/">Dr. Kecheng Zheng</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2 class="section-heading">Education</h2>
+      <div class="experience-grid">
+        <div class="experience-item">
+          <div class="experience-logo"><img src="assets/education/fudan.png" alt="Fudan University"><img src="assets/education/sii.png" alt="Shanghai Innovation Institute"></div>
+          <div class="experience-content">
+            <div class="experience-institution">Fudan University &amp; Shanghai Innovation Institute</div>
+            <div class="experience-period">2026–present</div>
+            <div class="experience-position">Institute of Trustworthy Embodied Artificial Intelligence<br>PhD in Computer Science and Technology</div>
+          </div>
+        </div>
+        <div class="experience-item">
+          <div class="experience-logo"><img src="assets/education/ucas.png" alt="UCAS"><img src="assets/education/casia.png" alt="Institute of Automation"></div>
+          <div class="experience-content">
+            <div class="experience-institution">University of Chinese Academy of Sciences</div>
+            <div class="experience-period">2023–2026</div>
+            <div class="experience-position">Institute of Automation, Chinese Academy of Sciences<br>MS in Control Science and Engineering</div>
+          </div>
+        </div>
+        <div class="experience-item">
+          <div class="experience-logo"><img src="assets/education/hunan.png" alt="Hunan University"></div>
+          <div class="experience-content">
+            <div class="experience-institution">Hunan University</div>
+            <div class="experience-period">2019–2023</div>
+            <div class="experience-position">School of Artificial Intelligence and Robotics<br>BEng in Automation, minor in Robotics Engineering</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards">
+      <h2 class="section-heading">Awards</h2>
+      <ul>
+        <li>National Scholarship (Graduate: 2025; Undergraduate: 2021, 2022)</li>
+        <li>Outstanding Undergraduate Thesis, Hunan University (2023)</li>
+        <li>First Prize, Manipulation Track, Intel Grand Challenge on Indoor Robot Learning (2023)</li>
       </ul>
     </section>
 
-    <section id="service" class="section detail-section" aria-labelledby="service-title">
-      <h2 id="service-title">Professional Service</h2>
-      <dl class="service-list">
-        <dt>Conference reviewer</dt><dd>IEEE International Conference on Robotics and Automation (ICRA)<br>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</dd>
-        <dt>Journal reviewer</dt><dd>IEEE Transactions on Robot Learning (T-RL)<br>IEEE Robotics and Automation Letters (RA-L)</dd>
-      </dl>
+    <section id="service">
+      <h2 class="section-heading">Professional Service</h2>
+      <p><strong>Conference Reviewer:</strong> ICRA, IROS<br>
+        <strong>Journal Reviewer:</strong> IEEE Transactions on Robot Learning (T-RL), IEEE Robotics and Automation Letters (RA-L)</p>
     </section>
   </main>
-  <footer class="wrap"><a href="#top">Back to top</a></footer>
+  <footer class="site-footer">
+    <p><span class="footer-identity"><img class="robot-mark" src="assets/identity/robot-mark.png" width="30" height="30" alt="">&copy; 2026 Qingyu Fan</span> <a href="#top">Back to top</a></p>
+  </footer>
 </body>
 </html>

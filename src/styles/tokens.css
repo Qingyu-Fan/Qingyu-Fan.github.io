@@ -1,0 +1,180 @@
+/**
+ * Design Tokens
+ * 设计令牌 - 定义所有颜色、字体、间距等常量
+ * 基于现代学术主页最佳实践
+ */
+
+:root {
+  /* ============================================
+     COLORS - 颜色系统 (HSL-based, from Vincent Sitzmann)
+     ============================================ */
+
+  /* Text Colors - 文字颜色 (Vincent Sitzmann exact values) */
+  --color-text-primary: hsl(211, 25%, 10%);          /* Vincent: 正文颜色 */
+  --color-text-heading: hsl(211, 25%, 10%);          /* Vincent: 标题颜色 */
+  --color-text-secondary: hsl(211, 10%, 40%);        /* Vincent: 次要文字 */
+  --color-text-muted: hsl(211, 10%, 40%);            /* Vincent: 弱化文字 */
+
+  /* Link Colors - 链接颜色 */
+  --color-link-default: hsl(211, 75%, 40%);      /* 标准蓝色链接 */
+  --color-link-hover: hsl(211, 75%, 40%);        /* hover色 */
+
+  /* Accent Colors - 强调色(保留品牌色) */
+  --color-accent-primary: #A4424D;    /* 主强调色,用于特殊标记 */
+  --color-accent-hover: #8a3640;      /* 强调色hover */
+
+  /* Background Colors - 背景色 */
+  --color-bg-primary: hsl(0, 0%, 98%);        /* 主背景 */
+  --color-bg-secondary: hsl(0, 0%, 96%);      /* 次要背景,区块分隔 */
+  --color-bg-hover: hsl(0, 0%, 95%);          /* hover背景 */
+
+  /* Border Colors - 边框颜色 */
+  --color-border-light: hsl(211, 10%, 88%);      /* 浅边框 */
+  --color-border-medium: hsl(211, 10%, 75%);     /* 中等边框 */
+
+  /* Shadow Colors - 阴影颜色 */
+  --color-shadow-light: rgba(0, 0, 0, 0.08);
+  --color-shadow-medium: rgba(0, 0, 0, 0.12);
+
+
+  /* ============================================
+     TYPOGRAPHY - 字体系统
+     ============================================ */
+
+  /* Font Families - 字体族 (Vincent style) */
+  --font-family-base: MessinaSans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-family-heading: var(--font-family-base);
+  --font-family-mono: "SF Mono", "Monaco", "Inconsolata", "Fira Code", "Droid Sans Mono", monospace;
+
+  /* Font Sizes - 字号 (使用rem,基准16px,from Vincent's site) */
+  --font-size-hero: 2rem;             /* 32px - 名字/大标题 (Vincent: H1) */
+  --font-size-h1: 1.5rem;             /* 24px - 一级标题 (Vincent: H2) */
+  --font-size-h2: 1.25rem;            /* 20px - 二级标题 */
+  --font-size-h3: 1.125rem;           /* 18px - 三级标题 */
+  --font-size-pub-title: 1.0625rem;   /* 17px - 论文标题 */
+  --font-size-base: 1rem;             /* 16px - 正文 */
+  --font-size-small: 0.9375rem;       /* 15px - 作者名等 */
+  --font-size-tiny: 0.875rem;         /* 14px - venue/日期 */
+
+  /* Line Heights - 行高 */
+  --line-height-tight: 1.2;           /* 标题紧凑 */
+  --line-height-normal: 1.3;          /* 标题正常 */
+  --line-height-relaxed: 1.6;         /* 列表舒适 */
+  --line-height-loose: 1.6;           /* 正文 */
+
+  /* Font Weights - 字重 */
+  --font-weight-normal: 400;          /* Regular - Vincent style */
+  --font-weight-medium: 500;          /* 中等 */
+  --font-weight-semibold: 600;        /* 半粗 */
+  --font-weight-bold: 700;            /* 粗体 */
+  --font-weight-extrabold: 800;       /* 超粗 */
+
+  /* Letter Spacing - 字距 */
+  --letter-spacing-tight: -0.02em;    /* 标题稍紧 */
+  --letter-spacing-normal: normal;    /* 正文正常 */
+
+
+  /* ============================================
+     SPACING - 间距系统
+     ============================================ */
+
+  /* Layout Spacing - 布局间距 (Phase 3: increased breathing room) */
+  --spacing-section: 5rem;            /* 80px - section间距 (Phase 3: 4rem → 5rem) */
+  --spacing-subsection: 3rem;         /* 48px - subsection间距 (Phase 3: 2.5rem → 3rem) */
+  --spacing-component: 2rem;          /* 32px - 组件间距 */
+  --spacing-element: 1.5rem;          /* 24px - 元素间距 */
+  --spacing-item: 1rem;               /* 16px - 小项间距 */
+  --spacing-compact: 0.75rem;         /* 12px - 紧凑间距 */
+  --spacing-tight: 0.5rem;            /* 8px - 很紧间距 */
+
+  /* Container Spacing - 容器边距 (from Vincent's site) */
+  --container-padding: 1.5rem;          /* 24px - 桌面端padding (Vincent: 0.75rem 1.5rem) */
+  --container-padding-mobile: 0.75rem;  /* 12px - 移动端padding */
+
+
+  /* ============================================
+     LAYOUT - 布局参数
+     ============================================ */
+
+  /* Container Widths - 容器宽度 (from Vincent's site) */
+  --container-max-width: 800px;       /* 主内容最大宽度 (Vincent: 800px) */
+
+  /* Component Sizes - 组件尺寸 (Phase 3: larger avatar) */
+  --avatar-size: 240px;               /* 头像尺寸 (Phase 3: 200px → 240px) */
+  --avatar-size-mobile: 180px;        /* 移动端头像 (Phase 3: 150px → 180px) */
+  --pub-image-width: 160px;           /* 论文图片宽度 */
+  --pub-image-gap: 1.5rem;            /* 图片与文字间距 */
+  --exp-logo-size: 80px;              /* 机构logo尺寸 */
+
+  /* Border Radius - 圆角 */
+  --radius-sm: 4px;                   /* 小圆角 */
+  --radius-md: 8px;                   /* 中等圆角 */
+  --radius-lg: 12px;                  /* 大圆角 */
+  --radius-full: 50%;                 /* 圆形 */
+
+  /* Borders - 边框 */
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 4px;
+
+
+  /* ============================================
+     EFFECTS - 视觉效果
+     ============================================ */
+
+  /* Shadows - 阴影 */
+  --shadow-sm: 0 1px 3px var(--color-shadow-light);
+  --shadow-md: 0 4px 12px var(--color-shadow-light);
+  --shadow-lg: 0 8px 24px var(--color-shadow-medium);
+
+  /* Transitions - 过渡 */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.3s ease;
+
+
+  /* ============================================
+     BREAKPOINTS - 响应式断点
+     (在 @media 查询中使用,这里仅作文档)
+     ============================================ */
+
+  /* --breakpoint-mobile: 768px; */
+  /* --breakpoint-tablet: 1024px; */
+  /* --breakpoint-desktop: 1280px; */
+}
+
+
+/* ============================================
+   MOBILE OVERRIDES - 移动端覆盖
+   ============================================ */
+
+@media (max-width: 768px) {
+  :root {
+    /* 缩小字号 (保持桌面端比例) */
+    --font-size-hero: 1.75rem;        /* 28px */
+    --font-size-h1: 1.25rem;          /* 20px */
+    --font-size-h2: 1.125rem;         /* 18px */
+
+    /* 减少间距 */
+    --spacing-section: 3rem;          /* 48px */
+    --spacing-subsection: 2rem;       /* 32px */
+    --spacing-component: 1.5rem;      /* 24px */
+
+    /* 调整容器padding */
+    --container-padding: var(--container-padding-mobile);
+  }
+}
+
+
+/* ============================================
+   ACCESSIBILITY - 无障碍
+   ============================================ */
+
+/* 支持用户偏好:减少动画 */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0s;
+    --transition-base: 0s;
+    --transition-slow: 0s;
+  }
+}

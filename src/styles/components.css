@@ -1,0 +1,434 @@
+/**
+ * Components Styles
+ * 组件样式 - 各类可复用组件
+ */
+
+/* ============================================
+   NEWS LIST - 新闻列表
+   ============================================ */
+
+.news-list {
+  list-style: none;
+  padding: 0;
+}
+
+.news-item {
+  margin-bottom: 0.0rem;  /* Compact: reduced from --spacing-compact (0.75rem) */
+  line-height: var(--line-height-relaxed);
+  font-size: var(--font-size-small);
+}
+
+.news-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Phase 3: Improved news date formatting */
+.news-date {
+  display: inline-block;
+  min-width: 5.5rem;  /* Fixed width for alignment */
+  font-weight: var(--font-weight-bold);  /* Phase 3: 600 → 700 */
+  color: var(--color-text-secondary);
+  margin-right: var(--spacing-tight);
+}
+
+.news-content {
+  color: var(--color-text-primary);
+}
+
+/* Show more/less button */
+.show-more-button {
+  margin-top: var(--spacing-item);
+  display: inline-block;
+  color: var(--color-link-default);
+  cursor: pointer;
+  font-size: var(--font-size-small);
+  transition: color var(--transition-base);
+}
+
+.show-more-button:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+
+/* ============================================
+   PUBLICATION LIST - 论文列表 (Vincent style)
+   ============================================ */
+
+.publication-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;  /* Remove gap, use border instead */
+}
+
+.publication-item {
+  display: flex;
+  gap: 1rem;  /* Vincent: 1rem gap */
+  padding: 1rem 0;  /* Vincent: 1rem padding */
+  border-bottom: 1px solid var(--color-border-light);  /* Separator line */
+  transition: none;  /* No hover background */
+  align-items: flex-start;
+}
+
+.publication-item:first-child {
+  padding-top: 0;  /* No top padding for first item */
+}
+
+.publication-item:last-child {
+  border-bottom: none;  /* No border after last item */
+}
+
+.publication-image {
+  flex-shrink: 0;
+  width: 180px;  /* Vincent: 180px */
+  height: 101px;  /* Vincent: 101px (16:9 ratio) */
+  overflow: hidden;
+  border-radius: 4px;  /* Vincent: 4px */
+  background-color: #f3f4f6;
+}
+
+.publication-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.publication-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Publication title - Vincent style */
+.publication-title {
+  font-size: 1rem;  /* Vincent: 1rem = 16px */
+  font-weight: 600;  /* Vincent: 600 */
+  line-height: 1.3;
+  margin-top: 0;
+  margin-bottom: 0.35rem;  /* Vincent: .35rem */
+  color: var(--color-text-heading);
+}
+
+.publication-title a {
+  color: var(--color-text-heading);
+  text-decoration: none;
+}
+
+.publication-title a:hover {
+  color: var(--color-text-heading);
+  text-decoration: none;  /* No underline on hover */
+}
+
+/* Authors - Vincent style */
+.publication-authors {
+  font-size: 0.9rem;  /* Vincent: .9rem */
+  color: var(--color-text-muted);  /* Vincent: muted */
+  line-height: 1.5;
+  margin-bottom: 0.2rem;  /* Vincent: .2rem */
+}
+
+.publication-authors .author-me {
+  font-weight: var(--font-weight-bold);  /* Bold self name */
+  color: var(--color-text-heading);  /* Black for self */
+}
+
+/* Venue - Vincent style */
+.publication-venue {
+  font-size: 0.9rem;  /* Vincent: .9rem */
+  color: var(--color-text-primary);
+  font-style: normal;
+  font-weight: normal;  /* Vincent: normal weight */
+  line-height: 1.5;
+  margin-bottom: 0.5rem;  /* Vincent: .5rem */
+}
+
+/* Award - keep existing red/accent style */
+.publication-award {
+  font-size: var(--font-size-small);
+  color: #d97706;  /* Vincent: amber color */
+  font-weight: var(--font-weight-medium);
+  margin-top: 0.25rem;
+}
+
+/* Material links - Vincent style */
+.publication-links {
+  margin-top: 0;
+  display: flex;
+  gap: 0.75rem;  /* Vincent: .75rem */
+  flex-wrap: wrap;
+  font-size: 0.875rem;  /* Vincent: .875rem */
+}
+
+.publication-links a {
+  color: var(--color-link-default);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.publication-links a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+
+/* ============================================
+   EXPERIENCE GRID - 经历网格 (Compact)
+   ============================================ */
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 1.5rem;  /* Compact: row 0.75rem, column 1.5rem */
+}
+
+.experience-item {
+  display: flex;
+  gap: 0.5rem;  /* Compact: reduced from --spacing-item */
+  align-items: flex-start;
+}
+
+.experience-logo {
+  flex-shrink: 0;
+  width: 50px;  /* Compact: reduced from 80px */
+  height: 50px;
+}
+
+.experience-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.experience-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.experience-institution {
+  font-size: 0.9rem;  /* Compact: reduced from base */
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: 0.1rem;  /* Compact: reduced */
+  line-height: 1.3;
+}
+
+.experience-period {
+  font-size: 0.8rem;  /* Compact: smaller */
+  color: var(--color-text-muted);
+  margin-bottom: 0.1rem;  /* Compact: reduced */
+}
+
+.experience-position {
+  font-size: 0.8rem;  /* Compact: smaller */
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+
+/* ============================================
+   TWO COLUMN LIST - 两列列表 (Vincent style)
+   ============================================ */
+
+.two-column-list {
+  display: flex;
+  gap: 4rem;  /* 两列之间的间距 */
+}
+
+.two-column-list ul {
+  flex: 1;
+  margin: 0;
+  padding-left: 1.25rem;  /* 圆点缩进 */
+}
+
+.two-column-list li {
+  margin-bottom: 0.35rem;  /* Vincent's li margin */
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+.two-column-list li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ============================================
+   INTERNS GRID - 实习生网格 (保留旧样式兼容)
+   ============================================ */
+
+.interns-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-item) var(--spacing-component);
+}
+
+.interns-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.interns-column li {
+  margin-bottom: 0.5rem;
+  font-size: var(--font-size-base);
+}
+
+.interns-column li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ============================================
+   PUBLICATION FILTERS - 论文筛选导航
+   ============================================ */
+
+.publication-filters {
+  margin-bottom: var(--spacing-element);
+}
+
+/* Publication header - title and inline filters */
+.section-heading.no-border {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.section-heading .heading-text {
+  border-bottom: 2px solid var(--color-text-heading);
+  padding-bottom: 0.25rem;
+}
+
+.section-heading .inline-filters {
+  font-size: 1.0rem;
+  font-weight: normal;
+  color: var(--color-text-muted);
+  margin-left: 0.5rem;
+}
+
+.section-heading .inline-filters a {
+  color: var(--color-link-default);
+  text-decoration: none;
+}
+
+.section-heading .inline-filters a:hover {
+  text-decoration: underline;
+}
+
+.section-heading .inline-filters a.active {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.filter-links {
+  display: inline;
+  font-size: var(--font-size-tiny);  /* 14px，更小的字体 */
+}
+
+.filter-links a {
+  color: var(--color-link-default);
+  text-decoration: none;
+}
+
+.filter-links a:hover {
+  text-decoration: underline;
+}
+
+.filter-links a.active {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  font-weight: var(--font-weight-medium);
+}
+
+.filter-links .separator {
+  color: var(--color-text-muted);
+  user-select: none;
+}
+
+.filter-section {
+  margin-bottom: 0.25rem;  /* 更紧凑的间距 */
+}
+
+.filter-label {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-right: var(--spacing-tight);
+  font-size: var(--font-size-small);  /* 更小的字体 */
+}
+
+.filter-tag {
+  display: inline-block;
+  margin-right: 0;  /* 移除间距，让链接紧挨着 */
+}
+
+
+/* ============================================
+   RESPONSIVE - 移动端组件
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Publications - 移动端简化 */
+  .publication-item {
+    flex-direction: column;
+    gap: var(--spacing-item);
+    padding: var(--spacing-compact);
+  }
+
+  .publication-image {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  /* Experience - 单列 */
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-element);
+  }
+
+  /* Interns - 单列 */
+  .interns-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-item);
+  }
+
+  /* Two column list - 移动端单列 */
+  .two-column-list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .two-column-list li:last-child {
+    margin-bottom: 0.35rem;
+  }
+
+  .two-column-list ul:last-child li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Filters - 堆叠显示 */
+  .section-heading .inline-filters {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.35rem;
+    line-height: 1.4;
+  }
+
+  .filter-section {
+    margin-bottom: 0.25rem;
+  }
+
+  .filter-label {
+    margin-right: 0.25rem;
+    font-size: var(--font-size-small);
+  }
+
+  .filter-links {
+    display: inline;
+    font-size: var(--font-size-small);
+  }
+
+  .filter-tag {
+    display: inline;
+  }
+
+  .filter-links .separator {
+    display: inline;
+  }
+}

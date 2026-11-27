@@ -1,0 +1,338 @@
+/**
+ * Layout Styles
+ * 布局样式 - 页面结构和容器
+ */
+
+/* ============================================
+   TOP NAVIGATION - 顶部导航栏 (Vincent style)
+   ============================================ */
+
+.top-nav {
+  width: 100%;
+  background-color: var(--color-bg-primary);
+}
+
+.top-nav-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0.8rem var(--container-padding);
+  padding-bottom: 1rem;  /* Vincent's padding-bottom */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* 分隔线 - 可调节长度 */
+.top-nav-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: var(--container-padding);
+  width: calc(100% - var(--container-padding) * 2);  /* 手动调节：改变这个值来调节分隔线长度，如 80%, 600px 等 */
+  height: 1px;
+  background-color: var(--color-border-light);
+}
+
+.top-nav-identity {
+  flex: 1;
+}
+
+.top-nav-name {
+  font-size: 2rem;  /* Vincent: 2rem = 32px */
+  font-weight: 700;  /* Vincent: 700 */
+  color: var(--color-text-heading);
+  margin: 0;
+  margin-bottom: 0.25rem;  /* Vincent's margin-bottom */
+  line-height: 1.2;
+}
+
+.top-nav-title,
+.subtitle {
+  font-size: 1rem;  /* Vincent: 1rem = 16px */
+  color: var(--color-text-muted);  /* Vincent: --color-muted */
+  margin: 0;
+  font-weight: var(--font-weight-normal);
+}
+
+.top-nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.top-nav-links a {
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color var(--transition-base);
+  font-weight: var(--font-weight-normal);
+}
+
+.top-nav-links a:hover {
+  color: var(--color-link-default);
+  text-decoration: none;
+}
+
+
+/* ============================================
+   MAIN CONTAINER - 主容器
+   ============================================ */
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  width: 100%;
+}
+
+
+/* ============================================
+   PAGE STRUCTURE - 页面结构
+   ============================================ */
+
+main {
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
+
+/* ============================================
+   SECTIONS - 区块 (Vincent style spacing)
+   ============================================ */
+
+section {
+  margin-bottom: 1.25rem;  /* Vincent: ~1.25rem between sections */
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+/* Section 标题 (Vincent style: simple bold text) */
+.section-heading {
+  font-size: 1.5rem;  /* Vincent: 1.5rem = 24px */
+  font-weight: 600;  /* Vincent: 700, not 800 */
+  color: var(--color-text-heading);
+  margin-top: 1.5rem;  /* Compact: reduced from 1.5rem */
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid var(--color-text-heading);
+  display: inline-block;
+}
+
+
+/* ============================================
+   HERO SECTION - 头部区块 (Vincent style)
+   ============================================ */
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;  /* Vincent's gap */
+  margin-bottom: 1.5rem;  /* Vincent: 1.5rem after hero */
+  padding: 1rem 0 1.5rem 0;  /* top breathing room + bottom spacing */
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 65%;  /* Vincent's max-width for text */
+}
+
+.hero-avatar {
+  flex-shrink: 0;
+  margin-top: 4.5rem;
+  text-align: center;
+}
+
+.hero-avatar img {
+  width: 200px;   /* Vincent's avatar size */
+  height: 200px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+.contact-card {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  text-align: left;
+}
+
+.contact-card p {
+  margin: 0.2rem 0;
+}
+
+.contact-card p strong {
+  color: var(--color-text-primary);
+}
+
+/* Contact links (Vincent style: button-style badges) */
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;  /* 垂直居中对齐所有按钮 */
+  gap: 0.5rem;  /* Vincent's gap */
+  margin-top: 0.75rem;  /* Vincent: 0.75rem gap to text */
+  font-size: 0.875rem;  /* Vincent: 14px */
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.hero-links li {
+  display: flex;
+  align-items: center;  /* 确保内容垂直居中 */
+  border-radius: 6px;  /* Vincent's border-radius */
+  border: 1px solid var(--color-border-light);
+  background-color: var(--color-bg-secondary);
+  transition: all 0.25s ease-out;
+  margin: 0;
+}
+
+.hero-links li:hover {
+  background-color: var(--color-bg-primary);
+  border-color: var(--color-link-default);
+}
+
+.hero-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;  /* 文字和图标之间的间距 */
+  padding: 0.5em 0.875em;  /* Vincent's padding */
+  color: var(--color-text-primary);
+  text-decoration: none;
+  width: 100%;
+}
+
+.hero-links a:hover {
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.hero-links svg {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+.hero-bio {
+  font-size: 1.05rem;  /* Vincent's intro-quote font-size */
+  line-height: 1.45;   /* Vincent's line-height */
+  color: var(--color-text-primary);
+  margin-bottom: 0.75rem;  /* Vincent's margin-bottom */
+}
+
+.hero-bio .greeting {
+  font-size: 1.75rem;  /* Vincent's greeting font-size */
+  font-weight: 700;
+  margin-top: 0;       /* 手动调节：标题上方间距 */
+  margin-bottom: 0.75rem;  /* 手动调节：标题下方间距 */
+  border-bottom: none;  /* 移除默认的下划线 */
+  display: block;
+}
+
+.bio-callout {
+  width: 100%;
+  margin: 0.75rem 0 0 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid #2196F3;
+  background-color: #f5f5f5;
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: var(--color-text-primary);
+}
+
+.callout-warning {
+  color: var(--color-accent-primary);
+  font-weight: 600;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.site-footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.site-footer a {
+  color: var(--color-link-default);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* ============================================
+   RESPONSIVE - 移动端布局
+   ============================================ */
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  /* Top navigation mobile - centered like Vincent's */
+  .top-nav-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+    padding: 1rem var(--container-padding-mobile);
+  }
+
+  .top-nav-links {
+    gap: 1.25rem;
+    font-size: 0.9375rem;
+    justify-content: center;
+  }
+
+  /* Hero 区块纵向排列 (Vincent style) */
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;  /* Vincent's mobile gap */
+  }
+
+  .hero-text {
+    max-width: 100%;
+    text-align: center;  /* Center on mobile */
+  }
+
+  .hero-avatar {
+    margin-top: 0;
+    order: 0;
+  }
+
+  .hero-avatar img {
+    width: 150px;   /* Vincent's mobile avatar size */
+    height: 150px;
+  }
+
+  .hero-links {
+    justify-content: center;
+  }
+
+  .hero-bio {
+    text-align: left; /* 正文还是左对齐,更易读 */
+  }
+
+  .hero-bio .greeting {
+    text-align: center;
+  }
+
+  .bio-callout {
+    text-align: left;
+  }
+}
